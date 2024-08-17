@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Example</title>
+</head>
+<body>
+    <h1>Data from MySQL Database</h1>
+    <div id="result"></div>
+
+    <script>
+        function fetchData() {
+            // Send an AJAX request to the PHP script
+            fetch('fetch_data.php')
+                .then(response => response.json())
+                .then(data => {
+                    // Update the HTML with the data received
+                    let output = '';
+                    data.forEach(function(item) {
+                        output += `<p>Name: ${item.name}, Email: ${item.email}</p>`;
+                    });
+                    document.getElementById('result').innerHTML = output;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Fetch data when the page loads
+        window.onload = fetchData;
+    </script>
+</body>
+</html>
