@@ -1,9 +1,9 @@
 <?php
 // Database connection details
-$servername = "localhost";    // or your remote server name
-$username = "root";  // MySQL username
-$password = "2234";  // MySQL password
-$dbname = "register";    // Database name
+$servername = "sql10.freesqldatabase.com";    // or your remote server name
+$username = "sql10726132";  // MySQL username
+$password = "sql10726132";  // MySQL password
+$dbname = "8kdUmXhlxw";    // Database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
